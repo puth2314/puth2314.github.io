@@ -1,14 +1,3 @@
----
----
-
-@use 'main
-{%- if jekyll.environment == ' production ' -%}
-  .bundle
-{%- endif -%}
-';
-
-/* append your custom style below */
-
 #sidebar .site-title {
   font-size: 1.5rem;
 }
