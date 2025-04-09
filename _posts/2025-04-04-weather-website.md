@@ -28,6 +28,8 @@ tags: [html, css, javascript, api, serverless-function]
 - [ ] Phrases for locations in placeholder.
 - [ ] Figure out how to handle typing during transition/animation.
 - [ ] Figure out how to handle inputs during transition/animation.
+- [ ] Make it embeddable.
+- [ ] Be able to read user location.
 - [ ] Make the transitions/animations cleaner, some elements are changing during animation.
 - [x] Fix the weird overlapping animations.
 - [x] ~~Bootstrap or another UI framework.~~ Not necessary for this project scale.
