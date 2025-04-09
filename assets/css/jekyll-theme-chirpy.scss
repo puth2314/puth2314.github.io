@@ -1,1 +1,10 @@
 @use 'main';
+
+#sidebar .site-title {
+  font-size: 1.5rem;
+}
+
+#sidebar .sidebar-bottom .icon-border {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
