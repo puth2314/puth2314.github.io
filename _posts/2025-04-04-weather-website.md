@@ -2,13 +2,13 @@
 title: Weather Website
 date: 2025-04-04 12:00:00 +0700
 description: A simple website for weather.
-categories: [Software, Web Development]
+categories: [Software, Front-End]
 tags: [html, css, javascript, api, serverless-function]
 ---
 
 [Click me to visit my weather website.](https://puth2314.github.io/weather-website/)
 
-# Design Choices
+## Design Choices
 
 1. Should a there a title/heading in the website?
    - I chose no, because the website is relatively simple and a title/heading would take up quite a bit of space making the overall website feel unbalanced. In addition, I hope the feel and functionaility of the website explain itself well.
@@ -20,10 +20,11 @@ tags: [html, css, javascript, api, serverless-function]
 6. How should we choose the colors for the weather details (cloud percanta, wind speed, etc.)?
 7. How many forecasts should be shown?
 
-# To-Do
+## To-Do
 
 - [ ] Make the foreground (`main`) expand first, then show the content (`results-container`).
 - [ ] Dark mode.
+- [ ] Mobile view.
 - [ ] Autocomplete/suggestions of bad city names.
 - [ ] Phrases for locations in placeholder.
 - [ ] Figure out how to handle typing during transition/animation.
