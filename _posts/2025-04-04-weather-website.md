@@ -1,8 +1,8 @@
 ---
-title: Weather Website
+title: "Project: Weather Website"
 date: 2025-04-04 12:00:00 +0700
 description: A simple website for weather.
-categories: [Software, Front-End]
+categories: [Software, Frontend]
 tags: [html, css, javascript, api, serverless-function]
 ---
 
