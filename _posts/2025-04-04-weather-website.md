@@ -8,6 +8,10 @@ tags: [html, css, javascript, api, serverless-function]
 
 [Click me to visit my weather website.](https://puth2314.github.io/weather-website/)
 
+##
+
+This is a simple weather website built with html, css, and javascript using the Openweather API.
+
 ## Design Choices
 
 1. Should a there a title/heading in the website?
