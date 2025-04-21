@@ -1,7 +1,7 @@
 ---
 title: "Learnings: SQL"
 date: 2025-04-11 11:00:00 +0700
-description: A simple website for weather.
+description: Notes when learning SQL.
 categories: [Software, Database]
 tags: [learnings, sql, sqlite, python]
 ---

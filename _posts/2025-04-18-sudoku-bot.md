@@ -1,7 +1,7 @@
 ---
-title: "Sudoku Solver"
+title: "Project: Sudoku Bot"
 date: 2025-04-18 16:30:00 +0700
-description: A simple sudoku bot.
+description: A simple sudoku bot that reads, solves, and write to.
 categories: [Software, Programming]
 tags: [project, python, sudoku, backtracking]
 ---
