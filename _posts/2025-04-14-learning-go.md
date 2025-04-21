@@ -42,7 +42,8 @@ https://puthearathaim.postman.co/workspace/812f78a5-e533-47fb-81d9-c1414aaaf53d/
 <details>
 <summary>Variables</summary>
 
-```go
+{% highlight go %}
+
 package main
 
 import (
@@ -190,14 +191,16 @@ func intDivision(numerator int, denominator int) (int, int, error) {
 	var remainder int = numerator % denominator
 	return result, remainder, err
 }
-```
+
+{% endhighlight %}
 
 </details>
 
 <details>
 <summary>Structs</summary>
 
-```go
+{% highlight go %}
+
 package main
 
 import "fmt"
@@ -246,14 +249,16 @@ func main() {
 	var myEngine2 electricEngine = electricEngine{25, 15}
 	canMakeit(myEngine2, 50)
 }
-```
+
+{% endhighlight %}
 
 </details>
 
 <details>
 <summary>Pointers</summary>
 
-```go
+{% highlight go %}
+
 package main
 
 import (
@@ -296,14 +301,16 @@ func square(thing2 *[5]float64) [5]float64 {
 	}
 	return *thing2
 }
-```
+
+{% endhighlight %}
 
 </details>
 
 <details>
 <summary>Goroutines</summary>
 
-```go
+{% highlight go %}
+
 package main
 
 import (
@@ -348,14 +355,16 @@ func log() {
 	fmt.Printf("\nThe current results are: %v", results)
 	m.RUnlock()
 }
-```
+
+{% endhighlight %}
 
 </details>
 
 <details>
 <summary>Channels</summary>
 
-```go
+{% highlight go %}
+
 package main
 
 import (
@@ -424,14 +433,15 @@ func process(c chan int) {
 	}
 	fmt.Println("Exiting process")
 }
-```
+
+{% endhighlight %}
 
 </details>
 
 <details>
 <summary>Generics</summary>
 
-```go
+{% highlight go %}
 package main
 
 import (
@@ -495,7 +505,8 @@ func main() {
 func isEmpty[T any](slice []T) bool {
 	return len(slice) == 0
 }
-```
+
+{% endhighlight %}
 
 </details>
 
