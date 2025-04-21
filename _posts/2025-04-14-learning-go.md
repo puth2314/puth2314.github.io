@@ -1,6 +1,6 @@
 ---
 title: "Learnings: Go"
-date: 2025-14-04 10:00:00 +0700
+date: 2025-04-14 10:00:00 +0700
 description: Notes from learning Go.
 categories: [Software, Language]
 tags: [learnings, go, golang]
