@@ -1,12 +1,12 @@
 ---
-title: "Project: Weather Website"
+title: "Project: Weather App"
 date: 2025-04-04 12:00:00 +0700
-description: A simple website for weather.
+description: A simple web-app for weather.
 categories: [Software, Frontend]
-tags: [html, css, javascript, api, serverless-function]
+tags: [project, html, css, javascript, api, serverless-function]
 ---
 
-[Click me to visit my weather website.](https://puth2314.github.io/weather-website/)
+[Click me to visit my weather app.](https://puth2314.github.io/weather-website/)
 
 ##
 
