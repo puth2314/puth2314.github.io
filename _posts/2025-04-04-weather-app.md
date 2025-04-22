@@ -1,9 +1,10 @@
 ---
 title: "Project: Weather App"
 date: 2025-04-04 12:00:00 +0700
-description: A simple web-app for weather.
+description: A simple web app for weather.
 categories: [Software, Frontend]
 tags: [project, html, css, javascript, api, serverless-function]
+pin: true
 ---
 
 [Click me to visit my weather app.](https://puth2314.github.io/weather-website/)
