@@ -2,6 +2,7 @@ name: "Update README.md in Other Repos"
 on:
   push:
     branches:
+      - main
       - master
     paths:
       - "_posts/**"
