@@ -1,0 +1,42 @@
+name: "Update README.md in Other Repos"
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "_posts/**"
+    paths-ignore:
+      - "**/*"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v2
+
+      - name: Get the post from the _posts directory
+        run: |
+          LATEST_POST=$(ls _posts/*md | sort -r | head -n 1)
+          echo "Latest Post: $LATEST_POST"
+          cat "$LATEST_POST" > fetched-post.md
+
+      - name: Checkout the other repository
+        uses: actions/checkout@v2
+        with:
+          repository: puth2314/sudoku-agent
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update README.md in that repository
+        run: |
+          echo "## Latest Post" > README.md
+          cat ../fetched-post.md >> README.md
+
+      - name: Commit and push updated README.md in that repository
+        run: |
+          git config --global user.name "Puthearath Aim"
+          git config --global user.email "puthearathaim@protonmail.com"
+          git add README.md
+          git commit -m "Updated README with latest post"
+          git push
