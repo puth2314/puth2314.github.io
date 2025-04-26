@@ -1,4 +1,4 @@
-name: "Update README.md in Other Repos"
+name: "Update README.md in the latest post's repo"
 on:
   push:
     branches:
@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - "_posts/**"
+
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -18,24 +20,67 @@ jobs:
       - name: Fetch latest post from the _posts directory
         run: |
           LATEST_POST=$(ls _posts/*md | sort -r | head -n 1)
-          echo "LATEST_POST: $LATEST_POST"
-          cat "$LATEST_POST" > ../fetched-post.md
 
-      - name: Checkout the other repository
+          BASENAME=$(basename "$LATEST_POST")
+          REPO_NAME=$(echo "$BASENAME" | cut -d'-' -f4- | sed 's/.md$//')
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+
+          awk 'BEGIN {found=0} /^---/ {found++; next} found==2 {print}' "$LATEST_POST" > ../cleaned-post.md
+
+      - name: Checkout the target repository
         uses: actions/checkout@v2
         with:
-          repository: puth2314/sudoku-agent
+          repository: puth2314/${{ env.REPO_NAME }}
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          # path: sudoku-agent
+          path: target-repo
 
       - name: Update README.md in that repository
         run: |
-          cat ../fetched-post.md > README.md
+          cat ../cleaned-post.md > target-repo/README.md
 
-      - name: Commit and push updated README.md in that repository
+      - name: Commit and push updated README.md
+        working-directory: target-repo
         run: |
           git config --global user.name "Puthearath Aim"
           git config --global user.email "puthearathaim@protonmail.com"
           git add README.md
           git commit -m "Updated README with latest post"
           git push
+
+      # - name: Get list of changed markdown files
+      #   id: changed
+      #   run: |
+      #     echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^_posts/.*\.md$' | xargs)" >> $GITHUB_OUTPUT
+
+      # - name: Process each changed post
+      #   if: steps.changed.outputs.files != ''
+      #   run: |
+      #     for file in ${{ steps.changed.outputs.files }}; do
+      #       echo "Processing $file"
+      #       # Extract repo name from filename
+      #       BASENAME=$(basename "$file")
+      #       REPO_NAME=$(echo "$BASENAME" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-(.*)\.md$/\1/')
+
+      #       echo "Target repo: $REPO_NAME"
+
+      #       # Strip YAML frontmatter and save to temp file
+      #       awk 'BEGIN{in_yaml=0}
+      #            /^---/ {in_yaml++; next}
+      #            in_yaml==2 {print}' "$file" > stripped.md
+
+      #       # Clone the repo
+      #       git clone https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/puth2314/${REPO_NAME}.git
+      #       cd "$REPO_NAME"
+
+      #       # Update README.md
+      #       cp ../stripped.md README.md
+
+      #       # Commit and push
+      #       git config user.name "Puthearath Aim"
+      #       git config user.email "puthearathaim@protonmail.com"
+      #       git add README.md
+      #       git commit -m "Updated README with latest post"
+      #       git push
+
+      #       cd ..
+      #     done
