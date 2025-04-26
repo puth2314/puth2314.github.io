@@ -31,10 +31,10 @@ jobs:
 
           awk 'BEGIN {found=0} /^---/ {found++; next} found==2 {print}' "$LATEST_POST" > body.md
           {
-            echo '<div align="center">'
-            echo "# $TITLE"
-            echo "$DESCRIPTION"
-            echo '</div>'
+            echo '<h1 align="center">'"$TITLE"'</h1>'
+            echo ""
+            echo '<p align="center">'"$DESCRIPTION"'</p>'
+            echo ""
             cat body.md
           } > ../cleaned-post.md
 

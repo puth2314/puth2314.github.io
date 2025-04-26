@@ -39,6 +39,6 @@ This is a simple weather website built with html, css, and javascript using the 
 - [ ] Make the transitions/animations cleaner, some elements are changing during animation.
 - [x] Fix overlapping animations.
 - [x] ~~Bootstrap or another UI framework.~~ (Not needed for this scale)
-- [x] Weather forecasts.
+- [x] Add weather forecasts.
 - [x] Icons for weather.
 - [x] Better error for wrong city names.
