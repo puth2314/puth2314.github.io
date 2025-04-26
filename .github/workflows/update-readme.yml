@@ -22,8 +22,6 @@ jobs:
           LATEST_POST=$(ls _posts/*md | sort -r | head -n 1)
           echo "Latest Post: $LATEST_POST"
           cat "$LATEST_POST" > ../fetched-post.md
-          cd ..
-          ls
 
       - name: Checkout the other repository
         uses: actions/checkout@v2
@@ -34,6 +32,8 @@ jobs:
 
       - name: Update README.md in that repository
         run: |
+          cd ..
+          ls
           echo "## Latest Post" > sudoku-agent/README.md
           cat fetched-post.md >> sudoku-agent/README.md
 
