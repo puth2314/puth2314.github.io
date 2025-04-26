@@ -27,7 +27,6 @@ jobs:
 
           TITLE=$(awk -F': ' '/^title:/ {print $2}' "$LATEST_POST" | sed 's/^"//;s/"$//')
           DESCRIPTION=$(awk -F': ' '/^description:/ {print $2}' "$LATEST_POST" | sed 's/^"//;s/"$//')
-          echo "TITLE=$TITLE" >> $GITHUB_ENV
           echo "DESCRIPTION=$DESCRIPTION" >> $GITHUB_ENV
 
           awk 'BEGIN {found=0} /^---/ {found++; next} found==2 {print}' "$LATEST_POST" > body.md
