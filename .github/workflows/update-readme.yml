@@ -15,8 +15,6 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v2
 
-      - name:
-
       - name: Get the post from the _posts directory
         run: |
           LATEST_POST=$(ls _posts/*md | sort -r | head -n 1)
