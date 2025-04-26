@@ -10,7 +10,7 @@ pin: true
 ## Design Choices
 
 - 0 or -1 or None for empty cell
-  - cuz string can use 0.
+  - cuz string can use 0
 
 ## To-Do
 
