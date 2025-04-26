@@ -40,3 +40,4 @@ jobs:
           git add README.md
           git commit -m "Updated README with latest post"
           git push
+        env: GITHUB_TOKEN = ${{ secrets.PERSONAL_ACCESS_TOKEN }}
