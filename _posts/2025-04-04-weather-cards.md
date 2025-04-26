@@ -1,7 +1,7 @@
 ---
 title: Weather Cards
 date: 2025-04-04 12:00:00 +0700
-description: A simple weather web appp.
+description: A simple weather web apppp.
 categories: [Software, Frontend]
 tags: [html, css, javascript, api, serverless-function]
 pin: true
