@@ -30,7 +30,6 @@ jobs:
 
       - name: Update README.md in that repository
         run: |
-          echo "# Latest Post" > README.md
           cat ../fetched-post.md >> README.md
 
       - name: Commit and push updated README.md in that repository
@@ -40,5 +39,5 @@ jobs:
           git add README.md
           git commit -m "Updated README with latest post"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
