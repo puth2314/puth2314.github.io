@@ -1,9 +1,9 @@
 ---
-title: "Project: Weather App"
+title: Weather Cards
 date: 2025-04-04 12:00:00 +0700
-description: A simple web app for weather.
+description: A simple weather app.
 categories: [Software, Frontend]
-tags: [project, html, css, javascript, api, serverless-function]
+tags: [html, css, javascript, api, serverless-function]
 pin: true
 ---
 
