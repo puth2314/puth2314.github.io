@@ -1,17 +1,15 @@
 ---
 title: Weather Cards
 date: 2025-04-04 12:00:00 +0700
-description: A simple weather web app.
+description: This is a weather web app built with raw HTML/CSS/JavaScript, fetches weather data using the OpenWeather API, and focuses on a minimalist design.
 categories: [Software, Frontend]
 tags: [html, css, javascript, api, serverless-function]
 pin: true
 ---
 
-[Click me to visit my weather app.](https://puth2314.github.io/weather-website/)
+## Live Demo
 
-##
-
-This is a simple weather website built with html, css, and javascript using the Openweather API.
+[Click here to try the weather app.](https://puth2314.github.io/weather-cards/)
 
 ## Design Choices
 
