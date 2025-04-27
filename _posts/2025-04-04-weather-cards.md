@@ -1,7 +1,7 @@
 ---
 title: Weather Cards
 date: 2025-04-04 12:00:00 +0700
-description: This is a weather web app built with raw HTML/CSS/JavaScript, fetches weather data using the OpenWeather API, and focuses on a minimalist design.
+description: A minimal weather web app built with raw HTML/CSS/JavaScript.
 categories: [Software, Frontend]
 tags: [html, css, javascript, api, serverless-function]
 pin: true
