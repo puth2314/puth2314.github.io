@@ -19,7 +19,7 @@ jobs:
 
       - name: Fetch latest post from the _posts directory
         run: |
-          LATEST_POST=$(git log -1 --name-only --pretty="" -- _posts/*.md | head -n 1)
+          LATEST_POST=$(git log --pretty=format: --name-only -- _posts/*.md | grep '\.md$' | head -n 1)
 
           BASENAME=$(basename "$LATEST_POST")
           REPO_NAME=$(echo "$BASENAME" | cut -d'-' -f4- | sed 's/.md$//')
