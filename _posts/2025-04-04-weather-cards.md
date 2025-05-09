@@ -2,7 +2,7 @@
 title: Weather Cards
 date: 2025-04-04 12:00:00 +0700
 description: A minimal weather web app built with raw HTML/CSS/JavaScript.
-categories: [Software, Frontend]
+categories: [Software, Web Development]
 tags: [html, css, javascript, api, serverless-function]
 pin: true
 ---
