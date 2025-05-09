@@ -15,7 +15,9 @@ jobs:
 
     steps:
       - name: Checkout this repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
 
       - name: Fetch latest post from the _posts directory
         run: |
@@ -41,7 +43,7 @@ jobs:
           } > ../cleaned-post.md
 
       - name: Checkout the target repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: puth2314/${{ env.REPO_NAME }}
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

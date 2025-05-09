@@ -15,4 +15,3 @@ pin: true
 - [ ] Use gorilla/mux for cleaner routing
 - [ ] Add session/game IDs to support multiple games concurrently
 - [ ] Add WebSocket support for real-time updates
-- [ ] 
