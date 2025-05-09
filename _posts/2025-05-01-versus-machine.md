@@ -11,3 +11,7 @@ pin: true
 ## To-Do
 
 - [ ] Dont use utils.
+- [ ] https://playtictactoe.org/
+- [ ] Use gorilla/mux for cleaner routing
+- [ ] Add session/game IDs to support multiple games concurrently
+- [ ] Add WebSocket support for real-time updates
